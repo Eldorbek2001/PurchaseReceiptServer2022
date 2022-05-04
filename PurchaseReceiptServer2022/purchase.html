@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!---
+Ali ELbekov
+--->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Purchase</title>
+</head>
+
+
+<style>
+  .section {
+    background-color: PowderBlue;
+    width: 260px;
+    height: 440px;
+    border: solid black 6pt;
+    border-style: outset;
+    border-color: gray;
+    padding: 10px;
+  }
+
+
+</style>
+
+<body>
+
+  <form class="section" action="receipt.php" method="post">
+    <strong>
+    <p>Widget Purchase</p>
+    </strong>
+    <p><input type="text" name="name" id="firstName" pattern="[A-Z a-z]*" required> First Name</p>
+    <p><input type="text" name="lastName" id="lastName" pattern="[A-Z a-z]*" required> Last Name</p>
+    <p><input type="text" name="phone" id="phoneNumber" pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" required> Phone</p>
+    <p><input type="text" name="city" id="cityName" pattern="[A-Z a-z]*" required> City</p>
+    <select class="" name="states" id="state" required>
+      <option value="" selected="selected">State</option>
+      <option>AZ</option>
+      <option>CA</option>
+      <option>PA</option>
+      <option>WA</option>
+    </select><br>
+    <p><input name="zip" type="text" id="zipValue" pattern = "[0-9]{5}" required> Zip</p>
+    <input name = "quantity" type="number" min="1" max="5" placeholder="1-5" id='quantity' required>
+    Quantity (1-5)
+    <br>
+    <br>
+    <input type="radio" name="size" value="2.00 Small" required> Small $2.00<br>
+    <input type="radio" name="size" value="2.65 Medium" required> Medium $2.65<br>
+    <input type="radio" name="size" value="2.99 Large" required> Large $2.99<br>
+    <br>
+    <input type="submit">
+  </form>
+</body>
+
+</html>
